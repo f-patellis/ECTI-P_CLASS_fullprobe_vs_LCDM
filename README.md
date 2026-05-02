@@ -3,6 +3,23 @@
 
 ---
 
+## Context
+
+This repository presents the full-likelihood (CLASS + Cobaya) implementation of the ECTI-P model.
+
+It extends the initial background-only analysis available here:  
+👉 [ECTI-P background analysis](LIEN_VERS_TON_REPO)
+
+The present work tests the same late-time deformation within a full CMB likelihood framework,
+using Planck 2018 TT/TE/EE data and a Boltzmann solver.
+
+The ECTI-P model is implemented as a nested extension of ΛCDM at the background level,
+allowing a direct and controlled comparison while maintaining full compatibility with standard perturbation treatments.
+
+This choice enables robust testing within existing Boltzmann pipelines,
+pending the development of a fully self-consistent perturbation framework.
+---
+
 ## Key result
 
 <p align="center">
@@ -36,19 +53,27 @@ This improvement is not uniform across datasets and is dominated by late-time pr
   <img src="figures/02_delta_chi2_breakdown_MAP.png" width="600">
 </p>
 
-**Figure — Contribution to Δχ² = χ²(ECTI) − χ²(ΛCDM) evaluated at the MAP.**  
+**Contribution to Δχ² = χ²(ECTI) − χ²(ΛCDM) evaluated at the MAP.** 
+
 Negative values indicate an improvement of ECTI-P relative to ΛCDM.
 
-| Dataset | Δχ² |
-|--------|------|
-| SN Ia  | −15.40 |
-| CMB    | +0.24 |
-| RSD    | +0.34 |
-| Shear  | −3.50 |
-| BAO    | +2.64 |
+CMB: +0.24 | SN Ia: −15.40 | BAO: +2.64 | RSD: +0.34 | Shear: −3.50
 
 The total improvement is dominated by SN Ia, with a secondary contribution from cosmic shear,
 while BAO and RSD remain consistent and the CMB likelihood is preserved.
+
+---
+
+## SN Ia residuals at MAP
+
+<p align="center">
+  <img src="figures/09_SN_binned_residuals_MAP.png" width="650">
+</p>
+
+**Figure — Binned Pantheon+ SN Ia residuals at the MAP for ΛCDM (blue) and ECTI-P (orange).**  
+Residuals are defined as μ_obs − μ_model and binned in redshift.
+
+This plot illustrates the origin of the SN-driven χ² improvement: ECTI-P changes the redshift-dependent residual pattern relative to ΛCDM, reducing the mismatch that dominates the total Δχ² gain.
 
 ---
 
