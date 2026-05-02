@@ -8,7 +8,7 @@
 This repository presents the full-likelihood (CLASS + Cobaya) implementation of the ECTI-P model.
 
 It extends the initial background-only analysis available here:  
-👉 [ECTI-P background analysis](LIEN_VERS_TON_REPO)
+[ECTI-P background analysis (GitHub)](https://github.com/f-patellis/ECTI-P_vs_LCDM)
 
 The present work tests the same late-time deformation within a full CMB likelihood framework,
 using Planck 2018 TT/TE/EE data and a Boltzmann solver.
@@ -18,6 +18,7 @@ allowing a direct and controlled comparison while maintaining full compatibility
 
 This choice enables robust testing within existing Boltzmann pipelines,
 pending the development of a fully self-consistent perturbation framework.
+
 ---
 
 ## Key result
@@ -25,6 +26,8 @@ pending the development of a fully self-consistent perturbation framework.
 <p align="center">
   <img src="figures/01_corner_overlay_LCDM_vs_ECTI_FULLPROBE_200k.png" width="800">
 </p>
+
+- Improvement evaluated at maximum a posteriori (MAP)
 
 **Δχ² = −15.69**  
 **ECTI − ΛCDM, FULL PROBE, FAIR comparison**
@@ -39,12 +42,11 @@ pending the development of a fully self-consistent perturbation framework.
 
 ## Interpretation of the gain
 
-The improvement is driven by a controlled late-time deformation of the expansion history,
-which propagates into luminosity distances and improves agreement with SN Ia data,
-while leaving early-time observables (CMB) essentially unchanged.
-
 This improvement is not uniform across datasets and is dominated by late-time probes.
 
+In particular, the gain originates primarily from the SN Ia likelihood, while BAO and RSD remain statistically consistent with ΛCDM, and the CMB likelihood is preserved.
+
+This behavior is expected for a model that modifies only the late-time expansion history.
 ---
 
 ## χ² breakdown (ECTI − ΛCDM at MAP)
@@ -131,6 +133,8 @@ Deviation is confined to low redshift (z ≲ 0.5).
 
 **Figure — Effective dark energy density deformation induced by ECTI-P.**
 
+Effective dark energy density is reduced at low redshift, with the deviation peaking near z ≈ 0 and vanishing at higher redshift.
+
 ---
 
 <p align="center">
@@ -149,12 +153,28 @@ The ECTI-P background expansion is defined as:
 E²(z) = H(z)² / H₀²  
 = Ωm (1 + z)³ + (1 − Ωm) exp[β exp(−z / zt)]
 
-with:
+with fixed:
 
 - β = −0.10  
 - zt = 0.10  
 
 ΛCDM is recovered exactly for β = 0.
+
+---
+
+## Calibration of deformation parameters
+
+The deformation parameters (β, zt) are fixed to values calibrated from an independent background-only analysis.
+
+This calibration is documented here:  
+🔗 [ECTI-P background analysis (GitHub)](https://github.com/f-patellis/ECTI-P_vs_LCDM)
+
+In that analysis, the parameter pair (β = −0.10, zt = 0.10) was identified as a stable minimum of the likelihood using a full late-time dataset combination.
+
+The present work adopts these calibrated values to ensure a controlled and FAIR comparison with ΛCDM within a full-likelihood (CMB + LSS) framework.
+
+Allowing (β, zt) to vary would introduce additional degrees of freedom and require a dedicated model selection analysis, which is beyond the scope of this study.
+This separation ensures that parameter calibration and full-likelihood validation are performed independently.
 
 ---
 
@@ -204,7 +224,7 @@ Reference: DESI Collaboration (2024), arXiv:2404.03002
 
 - 7-point fσ₈ compilation  
 - Redshift range: 0.02 ≤ z ≤ 1.52  
-- Includes 6dF, SDSS MGS, BOSS DR12, and eBOSS measurements  
+- Compilation of literature fσ₈ measurements (6dF, SDSS MGS, BOSS DR12, eBOSS-era)  
 - Implemented as independent Gaussian constraints  
 
 ---
@@ -267,7 +287,7 @@ Derived parameters include:
 
 - Background-only phenomenological model  
 - ΛCDM perturbation sector assumed  
-- Fixed deformation parameters β and zt  
+- Deformation parameters (β, zt) fixed from independent calibration (not marginalized in this analysis)
 - No underlying fundamental theory yet  
 - RSD covariance treated diagonally  
 - IA and photo-z nuisance parameters fixed  
@@ -278,9 +298,8 @@ Derived parameters include:
 ## Future work
 
 - Full DES Y3 + KiDS joint shear modeling  
-- DESI clustering / RSD likelihood integration  
-- Free β and zt parameter exploration  
-- Perturbation-level ECTI implementation  
+- DESI clustering / RSD likelihood integration   
+- Extension to a fully self-consistent perturbation framework  
 - Independent external reproduction  
 
 ---
@@ -291,4 +310,4 @@ Main configuration:
 
 `/root/ecti_planck/cosmosis2cobaya/inputs/chains/ECTI_FULLPROBE_200000_run1.updated.yaml`
 
-All scripts, figures, and configuration files will be provided.
+All scripts, figures, and configuration files required to reproduce the analysis are included in this repository.
