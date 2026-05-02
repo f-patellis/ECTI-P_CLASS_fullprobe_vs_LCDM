@@ -16,11 +16,19 @@ Full likelihood cosmological analysis (CLASS + Cobaya)
 
 ECTI-P improves the total χ² relative to ΛCDM under a strictly FAIR comparison (k = 5).
 
-Δχ² ≈ − 15.68 (FULL PROBE)
+Δχ² ≈ − 15.69 (FULL PROBE)
 
 - Improvement primarily driven by SN Ia
 - No significant degradation of CMB constraints
 - Stable across independent runs
+
+---
+
+## χ² breakdown (ECTI − ΛCDM)
+
+<p align="center">
+  <img src="figures/02_delta_chi2_breakdown_MAP.png" width="600">
+</p>
 
 ---
 
