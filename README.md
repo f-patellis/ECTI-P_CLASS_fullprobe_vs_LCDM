@@ -1,7 +1,7 @@
 # ECTI-P vs ΛCDM — Full Likelihood (CLASS + Cobaya)  
 ### Late-time, background-only deformation of ΛCDM (hybrid implementation)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19983710.svg)](https://doi.org/10.5281/zenodo.19983710)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19983709.svg)](https://doi.org/10.5281/zenodo.19983709)
 
 ## TL;DR
 
@@ -56,7 +56,7 @@ pending the development of a fully self-consistent perturbation framework.
 
 This improvement is not uniform across datasets and is dominated by late-time probes.
 
-In particular, the gain originates primarily from the SN Ia likelihood, while BAO show a mild degradation that remains subdominant to the SN-driven improvement, RSD remain statistically consistent with ΛCDM, and the CMB likelihood is preserved.
+In particular, the gain originates primarily from the SN Ia likelihood, while BAO show a moderate degradation that remains subdominant to the SN-driven improvement, RSD remain statistically consistent with ΛCDM, and the CMB likelihood is preserved.
 
 This behavior is expected for a model that modifies only the late-time expansion history.
 
@@ -75,7 +75,7 @@ Negative values indicate an improvement of ECTI-P relative to ΛCDM.
 CMB: +0.24 | SN Ia: −15.40 | BAO: +2.64 | RSD: +0.34 | Shear: −3.50
 
 The total improvement is dominated by SN Ia, with a secondary contribution from cosmic shear,
-while BAO show a mild degradation, RSD remain statistically consistent with ΛCDM and the CMB likelihood is preserved.
+while BAO show a moderate degradation, RSD remain statistically consistent with ΛCDM and the CMB likelihood is preserved.
 
 ---
 
@@ -340,7 +340,7 @@ This repository provides:
 
 All chains, covariance matrices, and configuration files are publicly available on Zenodo:
 
-https://doi.org/10.5281/zenodo.19983710
+https://doi.org/10.5281/zenodo.19983709
 
 ---
 
@@ -371,7 +371,7 @@ If you use these results, please cite:
 
 Felipe David Jacques Miguel Patellis (2026)  
 **ECTI-P vs ΛCDM — Full Likelihood (CLASS + Cobaya)**  
-Zenodo. https://doi.org/10.5281/zenodo.19983710
+Zenodo. https://doi.org/10.5281/zenodo.19983709
 
 ```bibtex
 @dataset{patellis_2026_ecti,
@@ -379,5 +379,5 @@ Zenodo. https://doi.org/10.5281/zenodo.19983710
   title        = {ECTI-P vs ΛCDM — Full Likelihood (CLASS + Cobaya)},
   year         = 2026,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.19983710}
+  doi          = {10.5281/zenodo.19983709}
 }
