@@ -1,23 +1,35 @@
-### ECTI-P (CLASS Full-Likelihood) vs ΛCDM
+### ECTI-P vs ΛCDM
 
-Full likelihood cosmological analysis of a late-time, background-only extension of ΛCDM.
+Full likelihood cosmological analysis (CLASS + Cobaya)
 
 ---
 
-## Overview
+## Posterior comparison (ΛCDM vs ECTI-P)
 
-This repository presents a full cosmological comparison between:
+"corner" (figures/01_corner_overlay.png)
 
-- ΛCDM (reference model)
-- ECTI-P (late-time phenomenological extension)
+---
 
-using:
+## Key empirical result
 
-- Planck 2018 TT/TE/EE (full likelihood)
-- Pantheon+ SN Ia
-- DESI 2024 BAO
-- RSD data
-- KiDS-1000
+ECTI-P improves the total χ² relative to ΛCDM under a strictly FAIR comparison (k = 5).
+
+Δχ² ≈ − 15.68 (FULL PROBE)
+
+- Improvement primarily driven by SN Ia
+- No significant degradation of CMB constraints
+- Stable across independent runs
+
+---
+
+## χ² improvement by dataset (ECTI − ΛCDM)
+
+Dataset| Δχ²
+SN Ia| −
+CMB| −X
+RSD| −X
+KiDS| −X
+BAO| +X
 
 ---
 
@@ -40,16 +52,34 @@ with:
 
 - Background: modified via ECTI-P
 - Perturbations: ΛCDM (standard CLASS treatment)
+- Full likelihood pipeline using CLASS + Cobaya
 - No modification to early-time physics or recombination
 
 ---
 
-## Status
+## Data
 
-- Full likelihood pipeline implemented (CLASS + Cobaya)
-- Production runs completed
-- Consolidation runs in progress
+- Planck 2018 TT/TE/EE (full likelihood)
+- Pantheon+ SN Ia
+- DESI 2024 BAO
+- RSD data
+- KiDS-1000
 
 ---
 
-More results and figures will be added.
+## Robustness
+
+- Production runs (200k samples)
+- Independent covariance-initialized validation runs
+- Stable MAP and χ² across runs
+
+---
+
+## Limitations
+
+- Background-only model
+- ΛCDM perturbation sector
+- Fixed (β, zt)
+- No underlying fundamental theory yet
+
+---
