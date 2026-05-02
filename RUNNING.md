@@ -61,7 +61,7 @@ The analysis uses:
 - Pantheon+ SN Ia (SH0ES disabled)
 - DESI 2024 BAO
 - RSD fσ8 compilation
-- KiDS-1000 COSEBIs via CosmoSIS/cosmosis2cobaya
+- KiDS-1000 COSEBIs via CosmoSIS likelihood, interfaced to Cobaya through a cosmosis2cobaya bridge
 
 External likelihood data must be installed separately where required.
 
