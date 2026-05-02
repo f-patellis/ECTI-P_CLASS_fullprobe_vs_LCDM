@@ -40,14 +40,24 @@ ECTI-P improves the total χ² relative to ΛCDM under a strictly FAIR compariso
 
 ---
 
+## H₀ – S₈ comparison
+
+<p align="center">
+  <img src="figures/04_H0_S8_MAP_comparison.png" width="500">
+</p>
+---
+
 ## χ² improvement by dataset (ECTI − ΛCDM)
 
-Dataset| Δχ²
-SN Ia| −
-CMB| −X
-RSD| −X
-KiDS| −X
-BAO| +X
+The χ² improvement is dominated by SN Ia, with minor contributions from other probes.
+
+| Dataset | Δχ² |
+|--------|------|
+| SN Ia  | −15.40 |
+| CMB    | +0.24  |
+| RSD    | +0.34  |
+| KiDS   | −3.50  |
+| BAO    | +2.64  |
 
 ---
 
