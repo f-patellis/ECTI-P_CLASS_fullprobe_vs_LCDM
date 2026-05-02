@@ -57,6 +57,7 @@ This improvement is not uniform across datasets and is dominated by late-time pr
 In particular, the gain originates primarily from the SN Ia likelihood, while BAO and RSD remain statistically consistent with ΛCDM, and the CMB likelihood is preserved.
 
 This behavior is expected for a model that modifies only the late-time expansion history.
+
 ---
 
 ## χ² breakdown (ECTI − ΛCDM at MAP)
@@ -85,7 +86,9 @@ while BAO and RSD remain consistent and the CMB likelihood is preserved.
 **Figure — Binned Pantheon+ SN Ia residuals at the MAP for ΛCDM (blue) and ECTI-P (orange).**  
 Residuals are defined as μ_obs − μ_model and binned in redshift.
 
-This plot illustrates the origin of the SN-driven χ² improvement: ECTI-P changes the redshift-dependent residual pattern relative to ΛCDM, reducing the mismatch that dominates the total Δχ² gain.
+This plot illustrates the origin of the SN-driven χ² improvement: ECTI-P modifies the redshift-dependent residual pattern relative to ΛCDM, reducing the mismatch that dominates the total Δχ² gain.
+
+The positive shift in low-redshift residuals reflects the reduced expansion rate H(z) in ECTI-P at late times, which increases luminosity distances relative to ΛCDM. This behavior is a direct and expected consequence of the late-time deformation.
 
 ---
 
@@ -197,6 +200,8 @@ This separation ensures that parameter calibration and full-likelihood validatio
 - Likelihoods: Cobaya + Cosmosis bridge for COSEBIs  
 - No modification to early-time physics or recombination  
 
+ECTI-P is implemented as a hybrid background-level extension: the expansion history is modified, while perturbation equations are kept in the standard ΛCDM treatment. This avoids introducing an ad hoc perturbation sector before a self-consistent theory is developed.
+
 ---
 
 ## Data
@@ -286,10 +291,12 @@ Derived parameters include:
 
 ## Robustness
 
-- ECTI-P production run: 200k accepted samples  
-- Independent validation run (100k samples)  
+- ECTI-P production run: 200k accepted samples, converged with R−1 < 0.01  
+- ECTI-P validation run: 100k covariance-initialized run, R−1 < 0.03  
+- ΛCDM production run: 200k accepted samples, near-converged with R−1 ≈ 0.013    
 - Stable MAP region and Δχ² across runs  
-- Convergence: R̂ ≈ 1.00–1.01  
+
+Posterior summaries and marginalized constraints are computed from the MCMC chains; MAP values are used only for the χ² breakdown and diagnostic figures.
 
 ---
 
@@ -297,7 +304,8 @@ Derived parameters include:
 
 - Background-only phenomenological model  
 - ΛCDM perturbation sector assumed  
-- Deformation parameters (β, zt) fixed from independent calibration (not marginalized in this analysis)
+- Hybrid perturbation treatment: no dedicated ECTI-P perturbation equations are implemented  
+- Deformation parameters (β, zt) fixed from independent calibration (not marginalized in this analysis)  
 - No underlying fundamental theory yet  
 - RSD covariance treated diagonally  
 - IA and photo-z nuisance parameters fixed  
@@ -318,6 +326,17 @@ Derived parameters include:
 
 Main configuration:
 
-`/root/ecti_planck/cosmosis2cobaya/inputs/chains/ECTI_FULLPROBE_200000_run1.updated.yaml`
+`cosmosis2cobaya/inputs/chains/ECTI_FULLPROBE_200000_run1.updated.yaml`
 
-All scripts, figures, and configuration files required to reproduce the analysis are included in this repository.
+This repository provides:
+
+- configuration files (.yaml)
+- likelihood implementations (SN, BAO, RSD)
+- analysis scripts and figures
+
+The full set of production chains and outputs is provided separately (e.g. Zenodo archive).
+
+Due to the complexity of the CLASS + Cobaya + Planck likelihood environment,
+full one-click reproducibility is not guaranteed.
+
+However, the analysis can be reproduced within a properly configured environment.
