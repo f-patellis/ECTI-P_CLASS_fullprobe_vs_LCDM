@@ -32,6 +32,14 @@ ECTI-P improves the total χ² relative to ΛCDM under a strictly FAIR compariso
 
 ---
 
+## MAP summary
+
+<p align="center">
+  <img src="figures/03_MAP_summary_table.png" width="600">
+</p>
+
+---
+
 ## χ² improvement by dataset (ECTI − ΛCDM)
 
 Dataset| Δχ²
