@@ -24,6 +24,8 @@ ECTI-P improves the total χ² relative to ΛCDM under a strictly FAIR compariso
 
 ---
 
+## Model behavior (late-time deformation)
+
 ## χ² breakdown (ECTI − ΛCDM)
 
 <p align="center">
@@ -45,6 +47,15 @@ ECTI-P improves the total χ² relative to ΛCDM under a strictly FAIR compariso
 <p align="center">
   <img src="figures/04_H0_S8_MAP_comparison.png" width="500">
 </p>
+
+---
+
+## Foreground / prior diagnostics
+
+<p align="center">
+  <img src="figures/05_prior_SZ_diagnostic_MAP.png" width="600">
+</p>
+
 ---
 
 ## χ² improvement by dataset (ECTI − ΛCDM)
