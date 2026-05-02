@@ -1,6 +1,16 @@
 # ECTI-P vs ΛCDM — Full Likelihood (CLASS + Cobaya)  
 ### Late-time, background-only deformation of ΛCDM (hybrid implementation)
 
+## TL;DR
+
+Full-likelihood (CLASS + Cobaya) FAIR comparison between ΛCDM and ECTI-P:
+
+- Δχ² = −15.69 (MAP)  
+- H₀: 70.91 vs 67.94  
+- S₈: 0.812 vs 0.829  
+
+Late-time, background-only deformation improving SN Ia fit without degrading CMB constraints.
+
 ---
 
 ## Context
