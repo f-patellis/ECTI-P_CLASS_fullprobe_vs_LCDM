@@ -6,7 +6,9 @@ Full likelihood cosmological analysis (CLASS + Cobaya)
 
 ## Posterior comparison (ΛCDM vs ECTI-P)
 
-"corner" (figures/01_corner_overlay.png)
+<p align="center">
+  <img src="figures/01_corner_overlay_LCDM_vs_ECTI_FULLPROBE_200k.png" width="800">
+</p>
 
 ---
 
