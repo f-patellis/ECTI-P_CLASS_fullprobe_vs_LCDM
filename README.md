@@ -255,6 +255,8 @@ Reference: DESI Collaboration (2024), arXiv:2404.03002
 - COSEBIs modes: n ≤ 5  
 - DES Y3 data present in file but not used in this run  
 
+The KiDS-1000 COSEBIs likelihood is implemented via a CosmoSIS module and interfaced to Cobaya through a cosmosis2cobaya bridge.
+
 Reference: Asgari et al. (2021), A&A 645, A104
 
 ---
