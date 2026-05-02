@@ -1,6 +1,8 @@
 # ECTI-P vs ΛCDM — Full Likelihood (CLASS + Cobaya)  
 ### Late-time, background-only deformation of ΛCDM (hybrid implementation)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19983710.svg)](https://doi.org/10.5281/zenodo.19983710)
+
 ## TL;DR
 
 Full-likelihood (CLASS + Cobaya) FAIR comparison between ΛCDM and ECTI-P:
@@ -9,7 +11,7 @@ Full-likelihood (CLASS + Cobaya) FAIR comparison between ΛCDM and ECTI-P:
 - H₀: 70.91 vs 67.94  
 - S₈: 0.812 vs 0.829  
 
-Late-time, background-only deformation improving SN Ia fit without degrading CMB constraints.
+Late-time, background-only deformation improving SN Ia fit while remaining consistent with CMB constraints.
 
 ---
 
@@ -54,7 +56,7 @@ pending the development of a fully self-consistent perturbation framework.
 
 This improvement is not uniform across datasets and is dominated by late-time probes.
 
-In particular, the gain originates primarily from the SN Ia likelihood, while BAO and RSD remain statistically consistent with ΛCDM, and the CMB likelihood is preserved.
+In particular, the gain originates primarily from the SN Ia likelihood, while BAO show a mild degradation that remains subdominant to the SN-driven improvement, RSD remain statistically consistent with ΛCDM, and the CMB likelihood is preserved.
 
 This behavior is expected for a model that modifies only the late-time expansion history.
 
@@ -73,7 +75,7 @@ Negative values indicate an improvement of ECTI-P relative to ΛCDM.
 CMB: +0.24 | SN Ia: −15.40 | BAO: +2.64 | RSD: +0.34 | Shear: −3.50
 
 The total improvement is dominated by SN Ia, with a secondary contribution from cosmic shear,
-while BAO and RSD remain consistent and the CMB likelihood is preserved.
+while BAO show a mild degradation, RSD remain statistically consistent with ΛCDM and the CMB likelihood is preserved.
 
 ---
 
@@ -328,15 +330,54 @@ Main configuration:
 
 `cosmosis2cobaya/inputs/chains/ECTI_FULLPROBE_200000_run1.updated.yaml`
 
+Some paths in the archived `.updated.yaml` files are machine-specific and must be adapted to the user's local environment.
+
 This repository provides:
 
 - configuration files (.yaml)
 - likelihood implementations (SN, BAO, RSD)
 - analysis scripts and figures
 
-The full set of production chains and outputs is provided separately (e.g. Zenodo archive).
+All chains, covariance matrices, and configuration files are publicly available on Zenodo:
+
+https://doi.org/10.5281/zenodo.19983710
+
+---
+
+### Implementation note
+
+The ECTI-P model relies on a modified CLASS background implementation.
+
+Full reproduction of the pipeline requires:
+- this CLASS modification,
+- a working CLASS + Cobaya + CosmoSIS environment.
+
+The present repository and associated archive provide all necessary configuration files and chains to verify the results independently.
+
+The modified CLASS implementation used for the ECTI-P background is included in the associated Zenodo archive.
+
+---
 
 Due to the complexity of the CLASS + Cobaya + Planck likelihood environment,
 full one-click reproducibility is not guaranteed.
 
 However, the analysis can be reproduced within a properly configured environment.
+
+---
+
+## Citation
+
+If you use these results, please cite:
+
+Felipe David Jacques Miguel Patellis (2026)  
+**ECTI-P vs ΛCDM — Full Likelihood (CLASS + Cobaya)**  
+Zenodo. https://doi.org/10.5281/zenodo.19983710
+
+```bibtex
+@dataset{patellis_2026_ecti,
+  author       = {Patellis, Felipe David Jacques Miguel},
+  title        = {ECTI-P vs ΛCDM — Full Likelihood (CLASS + Cobaya)},
+  year         = 2026,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.19983710}
+}
