@@ -358,9 +358,9 @@ Full reproduction of the pipeline requires:
 - this CLASS modification,
 - a working CLASS + Cobaya + CosmoSIS environment.
 
-The present repository and associated archive provide all necessary configuration files and chains to verify the results independently.
+The present repository and associated archive provide all necessary configuration files and chains to verify the results independently. 
 
-The modified CLASS implementation used for the ECTI-P background is included in the associated Zenodo archive.
+The modified CLASS implementation is provided in the Zenodo archive due to file size limitations on GitHub.
 
 ---
 
