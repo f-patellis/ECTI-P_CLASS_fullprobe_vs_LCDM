@@ -148,7 +148,7 @@ Deviation is confined to low redshift (z ≲ 0.5).
 
 **Figure — Effective dark energy density deformation induced by ECTI-P.**
 
-Effective dark energy density is reduced at low redshift, with the deviation peaking near z ≈ 0 and vanishing at higher redshift.
+Effective dark energy density decreases from its normalized value at z = 0 toward an asymptotic value of exp(beta) at higher redshift.
 
 ---
 
@@ -163,17 +163,21 @@ The deformation aligns with observed SN residual structure.
 
 ## Model definition
 
-The ECTI-P background expansion is defined as:
+The ECTI-P background expansion is defined through the effective dark-energy density:
 
-E²(z) = H(z)² / H₀²  
-= Ωm (1 + z)³ + (1 − Ωm) exp[β exp(−z / zt)]
+rho_DE(z) / rho_DE(0) = exp[ beta * (1 - exp(-z / zt)) ]
+
+so that:
+
+E^2(z) = H(z)^2 / H0^2
+       = Omega_m (1 + z)^3 + (1 - Omega_m) * exp[ beta * (1 - exp(-z / zt)) ]
 
 with fixed:
 
-- β = −0.10  
-- zt = 0.10  
+- beta = -0.10
+- zt = 0.10
 
-ΛCDM is recovered exactly for β = 0.
+LCDM is recovered exactly for beta = 0.
 
 ---
 
