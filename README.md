@@ -306,6 +306,10 @@ Derived parameters include:
 
 Posterior summaries and marginalized constraints are computed from the MCMC chains; MAP values are used only for the χ² breakdown and diagnostic figures.
 
+A lower raw χ² value was found in the ECTI-P chains (χ² ≈ 4657.98, and similarly χ² ≈ 4656.9 in the 100k validation run), but these samples lie in an extreme SZ-related nuisance region.
+
+For this reason, they are treated as diagnostic outliers rather than as the reference MAP points used for the reported χ² breakdown.
+
 ---
 
 ## Limitations
