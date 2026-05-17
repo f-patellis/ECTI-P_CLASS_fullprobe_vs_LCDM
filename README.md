@@ -1,15 +1,20 @@
-# ECTI-P vs ΛCDM — Full Likelihood (CLASS + Cobaya)  
-### Late-time, background-only deformation of ΛCDM (hybrid implementation)
+# ECTI-P vs ΛCDM — Full Likelihood (CLASS + Cobaya)
+### DESY3-era full-probe analysis of a late-time background deformation of ΛCDM
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19983709.svg)](https://doi.org/10.5281/zenodo.19983709)
+
+> **Repository update (DES Year 3 integration):**  
+> This repository was updated to include the DES Year 3 weak-lensing likelihood within the full-probe analysis pipeline.  
+> The underlying ECTI-P model and its calibrated deformation parameters remain unchanged relative to the original release.  
+> The update extends the observational dataset only, allowing a more stringent full-likelihood validation of the same phenomenological framework.
 
 ## TL;DR
 
 Full-likelihood (CLASS + Cobaya) FAIR comparison between ΛCDM and ECTI-P:
 
 - Δχ² = −15.69 (MAP)  
-- H₀: 70.91 vs 67.94  
-- S₈: 0.812 vs 0.829  
+- H₀: 71.25 vs 68.34  
+- S₈: 0.795 vs 0.809
 
 Late-time, background-only deformation improving SN Ia fit while remaining consistent with CMB constraints.
 
@@ -48,15 +53,14 @@ pending the development of a fully self-consistent perturbation framework.
 - Same ΛCDM baseline parameter space  
 - No early-time, recombination, or perturbation-sector modification  
 - Main gain driven by SN Ia, with secondary contribution from cosmic shear  
-- No significant degradation of the CMB likelihood  
-
+- Moderate CMB and BAO degradation remaining subdominant to the late-time gain
 ---
 
 ## Interpretation of the gain
 
 This improvement is not uniform across datasets and is dominated by late-time probes.
 
-In particular, the gain originates primarily from the SN Ia likelihood, while BAO show a moderate degradation that remains subdominant to the SN-driven improvement, RSD remain statistically consistent with ΛCDM, and the CMB likelihood is preserved.
+In particular, the gain originates primarily from the SN Ia likelihood, while the CMB likelihood and BAO show a moderate degradation that remains subdominant to the SN-driven improvement, RSD remain statistically consistent with ΛCDM.
 
 This behavior is expected for a model that modifies only the late-time expansion history.
 
@@ -72,10 +76,10 @@ This behavior is expected for a model that modifies only the late-time expansion
 
 Negative values indicate an improvement of ECTI-P relative to ΛCDM.
 
-CMB: +0.24 | SN Ia: −15.40 | BAO: +2.64 | RSD: +0.34 | Shear: −3.50
+CMB: +2.96 | SN Ia: −16.73 | BAO: +1.58 | RSD: −0.19 | KiDS: −1.80 | DESY3: −1.51
 
 The total improvement is dominated by SN Ia, with a secondary contribution from cosmic shear,
-while BAO show a moderate degradation, RSD remain statistically consistent with ΛCDM and the CMB likelihood is preserved.
+while the CMB likelihood and BAO show a moderate degradation, RSD remain statistically consistent with ΛCDM.
 
 ---
 
@@ -250,14 +254,13 @@ Reference: DESI Collaboration (2024), arXiv:2404.03002
 
 ---
 
-### Weak lensing (KiDS-1000 COSEBIs)
+### Weak lensing (KiDS-1000 + DES Year 3)
 
 - KiDS-1000 COSEBIs likelihood  
 - Data file: `DES-Y3_xipm_and_KiDS-1000_COSEBIs_2.0_300.0.fits`  
 - Only KiDS-1000 source bins used in theoretical modeling  
 - Angular range: 2′ < θ < 300′  
 - COSEBIs modes: n ≤ 5  
-- DES Y3 data present in file but not used in this run  
 
 The KiDS-1000 COSEBIs likelihood is implemented via a CosmoSIS module and interfaced to Cobaya through a cosmosis2cobaya bridge.
 
@@ -327,7 +330,6 @@ For this reason, they are treated as diagnostic outliers rather than as the refe
 
 ## Future work
 
-- Full DES Y3 + KiDS joint shear modeling  
 - DESI clustering / RSD likelihood integration   
 - Extension to a fully self-consistent perturbation framework  
 - Independent external reproduction  
