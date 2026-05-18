@@ -16,7 +16,7 @@ Full-likelihood (CLASS + Cobaya) FAIR comparison between ΛCDM and ECTI-P:
 - H₀: 71.25 vs 68.34  
 - S₈: 0.795 vs 0.809
 
-Late-time, background-only deformation improving SN Ia fit while remaining consistent with CMB constraints.
+Late-time background deformation improving late-time likelihood consistency while remaining compatible with the Planck 2018 full-likelihood framework.
 
 ---
 
@@ -41,7 +41,7 @@ pending the development of a fully self-consistent perturbation framework.
 ## Key result
 
 <p align="center">
-  <img src="figures/01_corner_overlay_LCDM_vs_ECTI_FULLPROBE_200k.png" width="800">
+  <img src="figures_DESY3/corner_overlay_LCDM_vs_ECTI_FULLPROBE_DESY3_with_S8.png" width="800">
 </p>
 
 - Improvement evaluated at maximum a posteriori (MAP)
@@ -51,7 +51,8 @@ pending the development of a fully self-consistent perturbation framework.
 
 - Same datasets, likelihoods, priors, and nuisance treatment  
 - Same ΛCDM baseline parameter space  
-- No early-time, recombination, or perturbation-sector modification  
+- No modification to early-time or recombination physics
+- Standard ΛCDM perturbation treatment retained 
 - Main gain driven by SN Ia, with secondary contribution from cosmic shear  
 - Moderate CMB and BAO degradation remaining subdominant to the late-time gain
 ---
@@ -60,7 +61,7 @@ pending the development of a fully self-consistent perturbation framework.
 
 This improvement is not uniform across datasets and is dominated by late-time probes.
 
-In particular, the gain originates primarily from the SN Ia likelihood, while the CMB likelihood and BAO show a moderate degradation that remains subdominant to the SN-driven improvement, RSD remain statistically consistent with ΛCDM.
+In particular, the gain originates primarily from the SN Ia likelihood, while the CMB likelihood and BAO show a moderate penalties that remains subdominant to the SN-driven improvement, RSD remain statistically consistent with ΛCDM.
 
 This behavior is expected for a model that modifies only the late-time expansion history.
 
@@ -69,7 +70,7 @@ This behavior is expected for a model that modifies only the late-time expansion
 ## χ² breakdown (ECTI − ΛCDM at MAP)
 
 <p align="center">
-  <img src="figures/02_delta_chi2_breakdown_MAP.png" width="600">
+  <img src="figures_DESY3/02_delta_chi2_breakdown_MAP_DESY3.png" width="600">
 </p>
 
 **Contribution to Δχ² = χ²(ECTI) − χ²(ΛCDM) evaluated at the MAP.** 
@@ -86,7 +87,7 @@ while the CMB likelihood and BAO show a moderate degradation, RSD remain statist
 ## SN Ia residuals at MAP
 
 <p align="center">
-  <img src="figures/09_SN_binned_residuals_MAP.png" width="650">
+  <img src="figures_DESY3/09_SN_binned_residuals_MAP_DESY3.png" width="650">
 </p>
 
 **Figure — Binned Pantheon+ SN Ia residuals at the MAP for ΛCDM (blue) and ECTI-P (orange).**  
@@ -101,7 +102,7 @@ The positive shift in low-redshift residuals reflects the reduced expansion rate
 ## MAP summary
 
 <p align="center">
-  <img src="figures/03_MAP_summary_table.png" width="600">
+  <img src="figures_DESY3/08_MAP_summary_table_DESY3.png" width="600">
 </p>
 
 **Figure — Maximum a posteriori (MAP) parameter values for ΛCDM and ECTI-P.**
@@ -116,7 +117,7 @@ Key shifts:
 ## H₀ – S₈ comparison
 
 <p align="center">
-  <img src="figures/04_H0_S8_MAP_comparison.png" width="500">
+  <img src="figures_DESY3/03_H0_S8_MAP_comparison_DESY3.png" width="500">
 </p>
 
 **Figure — Shift in the H₀–S₈ plane between ΛCDM and ECTI-P.**  
@@ -127,7 +128,7 @@ ECTI-P moves toward higher H₀ and lower S₈.
 ## Foreground / prior diagnostics
 
 <p align="center">
-  <img src="figures/05_prior_SZ_diagnostic_MAP.png" width="600">
+  <img src="figures_DESY3/04_prior_SZ_diagnostic_MAP_DESY3.png" width="600">
 </p>
 
 **Figure — Contribution of priors and nuisance parameters at MAP.**  
@@ -138,7 +139,7 @@ No evidence of artificial χ² improvement driven by nuisance parameters.
 ## Model behavior
 
 <p align="center">
-  <img src="figures/06_E_ratio_vs_z.png" width="600">
+  <img src="figures_DESY3/05_E_ratio_vs_z_DESY3.png" width="600">
 </p>
 
 **Figure — Relative modification of the expansion rate: E_ECTI / E_LCDM − 1.**  
@@ -147,7 +148,7 @@ Deviation is confined to low redshift (z ≲ 0.5).
 ---
 
 <p align="center">
-  <img src="figures/07_rhoDE_ratio_vs_z.png" width="600">
+  <img src="figures_DESY3/06_rhoDE_ratio_vs_z_DESY3.png" width="600">
 </p>
 
 **Figure — Effective dark energy density deformation induced by ECTI-P.**
@@ -157,7 +158,7 @@ Effective dark energy density decreases from its normalized value at z = 0 towar
 ---
 
 <p align="center">
-  <img src="figures/08_SN_mu_difference_model_only.png" width="600">
+  <img src="figures_DESY3/07_SN_mu_difference_model_only_DESY3.png" width="600">
 </p>
 
 **Figure — Induced shift in SN Ia distance modulus (model-only prediction).**  
@@ -256,15 +257,27 @@ Reference: DESI Collaboration (2024), arXiv:2404.03002
 
 ### Weak lensing (KiDS-1000 + DES Year 3)
 
-- KiDS-1000 COSEBIs likelihood  
-- Data file: `DES-Y3_xipm_and_KiDS-1000_COSEBIs_2.0_300.0.fits`  
-- Only KiDS-1000 source bins used in theoretical modeling  
-- Angular range: 2′ < θ < 300′  
-- COSEBIs modes: n ≤ 5  
+The full-probe analysis includes both KiDS-1000 and DES Year 3 weak-lensing constraints.
 
-The KiDS-1000 COSEBIs likelihood is implemented via a CosmoSIS module and interfaced to Cobaya through a cosmosis2cobaya bridge.
+#### KiDS-1000
 
-Reference: Asgari et al. (2021), A&A 645, A104
+- KiDS-1000 cosmic shear constraints
+- External S8 reference used for tension comparison
+- Reference: Asgari et al. (2021), A&A 645, A104
+
+#### DES Year 3
+
+- DES Year 3 cosmic shear likelihood
+- Implemented through a Cosmosis-to-Cobaya bridge
+- Integrated directly within the global full-likelihood pipeline
+
+References:
+
+- Amon et al. (2022), Phys. Rev. D 105, 023514
+- Secco et al. (2022), Phys. Rev. D 105, 023515
+
+The DESY3 integration constitutes an extension of the observational dataset only.  
+The ECTI-P model, deformation parameters, and hybrid implementation remain unchanged relative to the original release.
 
 ---
 
@@ -302,16 +315,14 @@ Derived parameters include:
 
 ## Robustness
 
-- ECTI-P production run: 200k accepted samples, converged with R−1 < 0.01  
-- ECTI-P validation run: 100k covariance-initialized run, R−1 < 0.03  
-- ΛCDM production run: 200k accepted samples, near-converged with R−1 ≈ 0.013    
-- Stable MAP region and Δχ² across runs  
+## Robustness
 
-Posterior summaries and marginalized constraints are computed from the MCMC chains; MAP values are used only for the χ² breakdown and diagnostic figures.
+- Stable MAP region recovered across independent runs  
+- Consistent Δχ² preference for ECTI-P relative to ΛCDM  
+- Posterior summaries derived from converged MCMC chains  
+- MAP values used exclusively for χ² breakdown and diagnostic figures  
 
-A lower raw χ² value was found in the ECTI-P chains (χ² ≈ 4657.98, and similarly χ² ≈ 4656.9 in the 100k validation run), but these samples lie in an extreme SZ-related nuisance region.
-
-For this reason, they are treated as diagnostic outliers rather than as the reference MAP points used for the reported χ² breakdown.
+Dedicated nuisance and foreground diagnostics indicate that the observed improvement is not driven by pathological prior excursions.
 
 ---
 
@@ -324,7 +335,6 @@ For this reason, they are treated as diagnostic outliers rather than as the refe
 - No underlying fundamental theory yet  
 - RSD covariance treated diagonally  
 - IA and photo-z nuisance parameters fixed  
-- KiDS-only modeling within a combined DES+KiDS data file  
 
 ---
 
@@ -340,7 +350,7 @@ For this reason, they are treated as diagnostic outliers rather than as the refe
 
 Main configuration:
 
-`cosmosis2cobaya/inputs/chains/ECTI_FULLPROBE_200000_run1.updated.yaml`
+`cosmosis2cobaya/inputs/chains/ECTI_FULLPROBE_DESY3_covrun.updated.yaml`
 
 Some paths in the archived `.updated.yaml` files are machine-specific and must be adapted to the user's local environment.
 
