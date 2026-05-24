@@ -1,6 +1,6 @@
 The modified CLASS implementation used for the ECTI-P background is provided in the Zenodo archive:
 
-https://doi.org/10.5281/zenodo.19983709
+https://doi.org/10.5281/zenodo.20363612
 
 This includes:
 - classy_ecti_bgonly source code
